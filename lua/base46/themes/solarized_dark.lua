@@ -69,6 +69,38 @@ M.polish_hl = {
     DiagnosticVirtualTextWarn = { bg = "#1c1e45", fg = "#494fb6" },
     DiagnosticVirtualTextHint = { bg = "#2b3300", fg = "#859901" },
   },
+
+  treesitter = {
+    ["@constant"] = { fg = "#5995a6", italic = true, bold = true }, -- could be deleted if #284 get merged
+    ["@operator"] = { fg = "#5995a6" },
+    ["@variable"] = { fg = M.base_30.white },
+    ["@variable.parameter"] = { fg = "#c94c16" },
+    ["@function.builtin"] = { fg = "#c94c16", italic = true },
+    ["@comment"] = { fg = M.base_30.grey, italic = true },
+    ["@keyword"] = { italic = true },
+    ["@keyword.function"] = { italic = true },
+    ["@keyword.conditional"] = { italic = true },
+    ["@keyword.conditional.ternary"] = { italic = true },
+    ["@keyword.return"] = { italic = true },
+    ["@keyword.exception"] = { italic = true },
+    ["@keyword.directive"] = { italic = true },
+    ["@keyword.directive.define"] = { italic = true },
+    ["@keyword.storage"] = { italic = true },
+    ["@keyword.repeat"] = { italic = true },
+  },
+
+  syntax = {
+    Include = { fg = "#c94c16", italic = true },
+    Tag = { fg = "#29a298", italic = true },
+    -- Special = { italic = true },
+    Comment = {
+      italic = true,
+    },
+  },
+
+  defaults = {
+    IncSearch = { fg = "#c94c16", bg = "none", standout = true },
+  },
 }
 
 M = require("base46").override_theme(M, "solarized_dark")

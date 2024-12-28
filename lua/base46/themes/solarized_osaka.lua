@@ -59,15 +59,31 @@ M.base_16 = {
 
 M.polish_hl = {
   treesitter = {
-    ["@constant"] = { fg = "#5995a6" }, -- could be deleted if #284 get merged
+    ["@constant"] = { fg = "#5995a6", italic = true, bold = true }, -- could be deleted if #284 get merged
     ["@operator"] = { fg = "#5995a6" },
+    ["@variable"] = { fg = M.base_30.white },
     ["@variable.parameter"] = { fg = "#c94c16" },
-    ["@function.builtin"] = { fg = "#c94c16" },
+    ["@function.builtin"] = { fg = "#c94c16", italic = true },
+    ["@comment"] = { fg = M.base_30.grey, italic = true },
+    ["@keyword"] = { italic = true },
+    ["@keyword.function"] = { italic = true },
+    ["@keyword.conditional"] = { italic = true },
+    ["@keyword.conditional.ternary"] = { italic = true },
+    ["@keyword.return"] = { italic = true },
+    ["@keyword.exception"] = { italic = true },
+    ["@keyword.directive"] = { italic = true },
+    ["@keyword.directive.define"] = { italic = true },
+    ["@keyword.storage"] = { italic = true },
+    ["@keyword.repeat"] = { italic = true },
   },
 
   syntax = {
-    Include = { fg = "#c94c16" },
-    Tag = { fg = "#29a298" },
+    Include = { fg = "#c94c16", italic = true },
+    Tag = { fg = "#29a298", italic = true },
+    -- Special = { italic = true },
+    Comment = {
+      italic = true,
+    },
   },
 
   defaults = {
