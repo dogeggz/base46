@@ -4,13 +4,16 @@
 local M = {}
 
 M.base_30 = {
-  white = "#9eabac",
-  darker_black = "#011923",
-  black = "#011219",
-  black2 = "#02202D",
-  one_bg = "#022736",
-  one_bg2 = "#03394F",
-  one_bg3 = "#044A67",
+
+  darker_black = "#090c10", -- window bg
+  black = "#0b0e14", -- bg
+  black2 = "#151C28", -- tabufline bg
+  one_bg = "#242e42",
+  one_bg2 = "#364563",
+  one_bg3 = "#415376",
+  statusline_bg = "#0B0E14",
+  lightbg = "#151C28",
+  white = "#abb2bf",
   grey = "#405055",
   grey_fg = "#47585E",
   grey_fg2 = "#4F6369",
@@ -97,6 +100,6 @@ M.polish_hl = {
 
 M.type = "dark"
 
-M = require("base46").override_theme(M, "solarized_osaka")
+M = require("base46").override_theme(M, "solarized_zephyr")
 
 return M
